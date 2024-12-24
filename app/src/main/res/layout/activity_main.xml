@@ -1,0 +1,169 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- Logo del restaurante -->
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="310dp"
+        android:layout_height="216dp"
+        android:layout_marginTop="24dp"
+        android:contentDescription="Logo del restaurante"
+        android:src="@drawable/logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Imagen del primer platillo -->
+
+    <!-- Texto del primer platillo -->
+
+    <ImageView
+        android:id="@+id/ivPlatillo1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="90dp"
+        android:contentDescription="Imagen del primer platillo"
+        android:src="@drawable/pastel_de_choclo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivLogo" />
+
+    <TextView
+        android:id="@+id/tvPlatillo1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pastel de Choclo"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@id/ivPlatillo1"
+        app:layout_constraintStart_toEndOf="@id/ivPlatillo1"
+        android:layout_marginStart="16dp" />
+
+    <!-- Cantidad del primer platillo -->
+    <TextView
+        android:id="@+id/tvCantidad1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cant."
+        app:layout_constraintTop_toBottomOf="@id/tvPlatillo1"
+        app:layout_constraintStart_toEndOf="@id/ivPlatillo1"
+        android:layout_marginStart="16dp" />
+
+    <EditText
+        android:id="@+id/etCantidad1"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:hint="0"
+        android:inputType="number"
+        app:layout_constraintTop_toBottomOf="@id/tvCantidad1"
+        app:layout_constraintStart_toEndOf="@id/ivPlatillo1"
+        android:layout_marginStart="16dp" />
+
+    <!-- Precio del primer platillo -->
+    <TextView
+        android:id="@+id/tvPrecio1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$12.000"
+        app:layout_constraintTop_toBottomOf="@id/etCantidad1"
+        app:layout_constraintStart_toEndOf="@id/ivPlatillo1"
+        android:layout_marginStart="16dp" />
+
+    <!-- Imagen del segundo platillo -->
+
+    <!-- Texto del segundo platillo -->
+
+    <ImageView
+        android:id="@+id/ivPlatillo2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="28dp"
+        android:contentDescription="Imagen del segundo platillo"
+        android:src="@drawable/cazuela"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivPlatillo1" />
+
+    <TextView
+        android:id="@+id/tvPlatillo2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cazuela"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@id/ivPlatillo2"
+        app:layout_constraintStart_toEndOf="@id/ivPlatillo2"
+        android:layout_marginStart="16dp" />
+
+    <!-- Cantidad del segundo platillo -->
+    <TextView
+        android:id="@+id/tvCantidad2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cant."
+        app:layout_constraintTop_toBottomOf="@id/tvPlatillo2"
+        app:layout_constraintStart_toEndOf="@id/ivPlatillo2"
+        android:layout_marginStart="16dp" />
+
+    <EditText
+        android:id="@+id/etCantidad2"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:hint="0"
+        android:inputType="number"
+        app:layout_constraintTop_toBottomOf="@id/tvCantidad2"
+        app:layout_constraintStart_toEndOf="@id/ivPlatillo2"
+        android:layout_marginStart="16dp" />
+
+    <!-- Precio del segundo platillo -->
+    <TextView
+        android:id="@+id/tvPrecio2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$10.000"
+        app:layout_constraintTop_toBottomOf="@id/etCantidad2"
+        app:layout_constraintStart_toEndOf="@id/ivPlatillo2"
+        android:layout_marginStart="16dp" />
+
+    <!-- Subtotales y totales -->
+    <TextView
+        android:id="@+id/tvComida"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Comida: $0"
+        app:layout_constraintTop_toBottomOf="@id/ivPlatillo2"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <Switch
+        android:id="@+id/switchPropina"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="¿Incluir propina?"
+        app:layout_constraintTop_toBottomOf="@id/tvComida"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/tvPropina"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Propina: $0"
+        app:layout_constraintTop_toBottomOf="@id/switchPropina"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/tvTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TOTAL: $0"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/tvPropina"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="8dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
